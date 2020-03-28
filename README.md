@@ -1,6 +1,7 @@
 # projeto_perguntas
 
-A new Flutter project.
+App de perguntas da bíblia com o fins de estudo de flutter, mostrando o resultado de quantas perguntas foram acertadas no final.
+
 
 ## Getting Started
 
