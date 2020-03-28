@@ -12,7 +12,7 @@ class ResultadoPersonalizado extends StatelessWidget {
       children: <Widget>[
         Center(
           child: Text(
-            "Total de Acertos: ${acertos}/5",
+            "Total de Acertos: ${acertos}",
             style: TextStyle(fontSize: 40),
           ),
         ),

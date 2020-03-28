@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:projeto_perguntas/MeuApp/questao2.dart';
-import 'package:projeto_perguntas/MeuApp/resposta2.dart';
+import 'package:projeto_perguntas/components/questao.dart';
+import 'package:projeto_perguntas/components/resposta.dart';
+
 
 class QuestionarioPersonalizado extends StatelessWidget {
   final List<Map<String, Object>> perguntas;

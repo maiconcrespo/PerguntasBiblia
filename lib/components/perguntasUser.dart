@@ -1,19 +1,16 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:projeto_perguntas/MeuApp/questao2.dart';
-import 'package:projeto_perguntas/MeuApp/questionario2.dart';
-import 'package:projeto_perguntas/MeuApp/resposta2.dart';
-import 'package:projeto_perguntas/MeuApp/resultado2.dart';
+import 'package:projeto_perguntas/components/questionario.dart';
+import 'package:projeto_perguntas/components/resultado.dart';
 
-class PerguntaAppPersonalizado extends StatefulWidget {
+class PerguntasUser extends StatefulWidget {
   @override
-  _PerguntaAppPersonalizadoState createState() =>
-      _PerguntaAppPersonalizadoState();
+  _PerguntasUserState createState() => _PerguntasUserState();
 }
 
-class _PerguntaAppPersonalizadoState extends State<PerguntaAppPersonalizado> {
+class _PerguntasUserState extends State<PerguntasUser> {
   var _perguntaSelecionada = 0;
   var totalAcerto = 0;
+
   final _perguntas = const [
     {
       'texto': '1 - Quantas pragas foram enviadas ao Egito?',
@@ -83,32 +80,21 @@ class _PerguntaAppPersonalizadoState extends State<PerguntaAppPersonalizado> {
     });
   }
 
-
-void reiniciar(){
-  setState(() {    
-  _perguntaSelecionada = 0;
-  totalAcerto = 0;
-  });
-}
-
+  void reiniciar() {
+    setState(() {
+      _perguntaSelecionada = 0;
+      totalAcerto = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.purple,
-          title: Center(child: Text("Perguntas Biblicas !!")),
-        ),
-        body: existePergunta
-            ? QuestionarioPersonalizado(
-                _perguntas,
-                _perguntaSelecionada,
-                _resposta,
-              )
-            : ResultadoPersonalizado(totalAcerto,reiniciar),
-      ),
-    );
+    return existePergunta
+        ? QuestionarioPersonalizado(
+            _perguntas,
+            _perguntaSelecionada,
+            _resposta,
+          )
+        : ResultadoPersonalizado(totalAcerto, reiniciar);
   }
 }
