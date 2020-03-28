@@ -90,11 +90,11 @@ class _PerguntasUserState extends State<PerguntasUser> {
   @override
   Widget build(BuildContext context) {
     return existePergunta
-        ? QuestionarioPersonalizado(
+        ? Questionario(
             _perguntas,
             _perguntaSelecionada,
             _resposta,
           )
-        : ResultadoPersonalizado(totalAcerto, reiniciar);
+        : Resultado(totalAcerto, reiniciar);
   }
 }

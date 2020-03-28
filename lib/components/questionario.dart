@@ -3,12 +3,12 @@ import 'package:projeto_perguntas/components/questao.dart';
 import 'package:projeto_perguntas/components/resposta.dart';
 
 
-class QuestionarioPersonalizado extends StatelessWidget {
+class Questionario extends StatelessWidget {
   final List<Map<String, Object>> perguntas;
   final int perguntaSelecionada;
   final void Function(bool) resposta;
 
-  QuestionarioPersonalizado(
+  Questionario(
       this.perguntas, this.perguntaSelecionada, this.resposta);
 
   bool get existePergunta {
@@ -22,9 +22,9 @@ class QuestionarioPersonalizado extends StatelessWidget {
         existePergunta ? perguntas[perguntaSelecionada]['respostas'] : null;
 
     return Column(children: <Widget>[
-      QuestaoPersonalisada(perguntas[perguntaSelecionada]['texto']),
+      Questao(perguntas[perguntaSelecionada]['texto']),
       ...respostas
-          .map((resp) => RespostaPersonalizada(
+          .map((resp) => Resposta(
                 resp['alternativa'],
                 () => resposta(resp['resposta']),
               )).toList()

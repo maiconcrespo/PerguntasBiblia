@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class ResultadoPersonalizado extends StatelessWidget {
+class Resultado extends StatelessWidget {
   final int acertos;
   final void Function() reiniciar;
-  ResultadoPersonalizado(this.acertos, this.reiniciar);
+  Resultado(this.acertos, this.reiniciar);
 
   @override
   Widget build(BuildContext context) {

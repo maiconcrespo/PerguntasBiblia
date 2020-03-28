@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-class RespostaPersonalizada extends StatelessWidget {
+class Resposta extends StatelessWidget {
 
   final String texto;
   final void Function() onSelection;
-  RespostaPersonalizada(this.texto, this.onSelection);
+  Resposta(this.texto, this.onSelection);
 
   @override
   Widget build(BuildContext context) {

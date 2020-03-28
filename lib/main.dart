@@ -19,10 +19,12 @@ class MyHomeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          backgroundColor: Colors.purple,
-          title: Center(child: Text("Perguntas Biblicas !!")),
-        ),
-        body: PerguntasUser(),
+        backgroundColor: Colors.purple,
+        title: Center(child: Text("Perguntas Biblicas !!")),
+      ),
+      body: SingleChildScrollView(
+        child: PerguntasUser(),
+      ),
     );
   }
 }
