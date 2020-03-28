@@ -1,7 +1,7 @@
 import 'package:projeto_perguntas/model/perguntas.dart';
 import 'package:projeto_perguntas/model/respostas.dart';
 
-final _todasPerguntas = [
+final todasPerguntas = [
   Perguntas('Quantas pragas foram enviadas ao Egito?', [
     Respostas('7 Pragas', false),
     Respostas('10 Pragas', true),
